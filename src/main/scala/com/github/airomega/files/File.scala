@@ -7,6 +7,9 @@ class File(override val parentPath:String, override val name:String, contents:St
 
   def asDirectory: Directory = throw new FilesystemException("file cannot be coverted to dir")
 
+  override def isDirectory: Boolean = false
+  override def isFile: Boolean = true
+
   def getType: String = "File"
 
   def asFile: File = this

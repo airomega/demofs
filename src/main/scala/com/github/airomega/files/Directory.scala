@@ -40,6 +40,9 @@ class Directory(override val parentPath: String, override val name: String, val 
 
   def asFile: File = throw new FilesystemException("Directory cannot be a file")
 
+  override def isDirectory: Boolean = true
+  override def isFile: Boolean = false
+
   override def getType: String = "Directory"
 
 }
