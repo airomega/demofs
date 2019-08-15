@@ -13,6 +13,7 @@ object Command {
   val LS = "ls"
   val PWD = "pwd"
   val TOUCH = "touch"
+  val CD = "cd"
 
   def emptyCommand: Command = new Command {
     override def apply(state: State): State = state
